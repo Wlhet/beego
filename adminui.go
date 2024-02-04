@@ -253,8 +253,8 @@ Welcome to Beego Admin Dashboard
 
 </title>
 
-<link href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcdn.net/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap.min.css" rel="stylesheet">
 
 <style type="text/css">
 ul.nav li.dropdown:hover > ul.dropdown-menu {
@@ -339,10 +339,10 @@ Healthcheck
 {{template "content" .}}
 </div>
 
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/plug-ins/725b2a2115b/integration/bootstrap/3/dataTables.bootstrap.js
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/datatables/1.10.21/js/dataTables.bootstrap.js
 "></script>
 
 <script type="text/javascript">
