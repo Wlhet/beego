@@ -393,11 +393,6 @@ func (c *Controller) ServeXML() {
 	c.Ctx.Output.XML(c.Data["xml"], hasIndent)
 }
 
-// ServeYAML sends yaml response.
-func (c *Controller) ServeYAML() {
-	c.Ctx.Output.YAML(c.Data["yaml"])
-}
-
 // ServeFormatted serve YAML, XML OR JSON, depending on the value of the Accept header
 func (c *Controller) ServeFormatted(encoding ...bool) {
 	hasIndent := BConfig.RunMode != PROD
