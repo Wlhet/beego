@@ -25,8 +25,6 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/prometheus/client_golang/prometheus/promhttp"
-
 	"github.com/wlhet/beego/grace"
 	"github.com/wlhet/beego/logs"
 	"github.com/wlhet/beego/toolbox"
@@ -66,7 +64,7 @@ func init() {
 	beeAdminApp.Route("/healthcheck", healthcheck)
 	beeAdminApp.Route("/task", taskStatus)
 	beeAdminApp.Route("/listconf", listConf)
-	beeAdminApp.Route("/metrics", promhttp.Handler().ServeHTTP)
+	// beeAdminApp.Route("/metrics", promhttp.Handler().ServeHTTP)
 	FilterMonitorFunc = func(string, string, time.Duration, string, int) bool { return true }
 }
 

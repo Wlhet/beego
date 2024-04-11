@@ -33,9 +33,9 @@ type fields struct {
 	fieldsRel     []*fieldInfo
 	fieldsReverse []*fieldInfo
 	fieldsDB      []*fieldInfo
-	rels          []*fieldInfo
-	orders        []string
-	dbcols        []string
+	// rels          []*fieldInfo
+	orders []string
+	dbcols []string
 }
 
 // add field info
@@ -296,7 +296,7 @@ checkType:
 
 	fi.fieldType = fieldType
 	fi.name = sf.Name
-	fi.column = getColumnName(fieldType, addrField, sf, tags["column"])
+	fi.column = getColumnName(fieldType, sf, tags["column"])
 	fi.addrValue = addrField
 	fi.sf = sf
 	fi.fullName = mi.fullName + mName + "." + sf.Name

@@ -921,7 +921,6 @@ func (d *dbBase) DeleteBatch(q dbQuerier, qs *querySet, mi *modelInfo, cond *Con
 
 // read related records.
 func (d *dbBase) ReadBatch(q dbQuerier, qs *querySet, mi *modelInfo, cond *Condition, container interface{}, tz *time.Location, cols []string) (int64, error) {
-
 	val := reflect.ValueOf(container)
 	ind := reflect.Indirect(val)
 
@@ -1017,7 +1016,6 @@ func (d *dbBase) ReadBatch(q dbQuerier, qs *querySet, mi *modelInfo, cond *Condi
 		sqlSelect += " DISTINCT"
 	}
 	query := fmt.Sprintf("%s %s FROM %s%s%s T0 %s%s%s%s%s", sqlSelect, sels, Q, mi.table, Q, join, where, groupBy, orderBy, limit)
-
 	if qs.forupdate {
 		query += " FOR UPDATE"
 	}

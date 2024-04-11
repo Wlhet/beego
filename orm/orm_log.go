@@ -29,7 +29,7 @@ type Log struct {
 	*log.Logger
 }
 
-//costomer log func
+// costomer log func
 var LogFunc func(query map[string]interface{})
 
 // NewLog set io.Writer to create a Logger.
@@ -118,8 +118,6 @@ func newStmtQueryLog(alias *alias, stmt stmtQuerier, query string) stmtQuerier {
 type dbQueryLog struct {
 	alias *alias
 	db    dbQuerier
-	tx    txer
-	txe   txEnder
 }
 
 var _ dbQuerier = new(dbQueryLog)

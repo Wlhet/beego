@@ -211,7 +211,7 @@ func (fp *FileProvider) SessionGC() {
 func (fp *FileProvider) SessionAll() int {
 	a := &activeSession{}
 	err := filepath.Walk(fp.savePath, func(path string, f os.FileInfo, err error) error {
-		return a.visit(path, f, err)
+		return a.visit(f, err)
 	})
 	if err != nil {
 		SLogger.Printf("filepath.Walk() returned %v\n", err)
@@ -299,7 +299,7 @@ type activeSession struct {
 	total int
 }
 
-func (as *activeSession) visit(paths string, f os.FileInfo, err error) error {
+func (as *activeSession) visit(f os.FileInfo, err error) error {
 	if err != nil {
 		return err
 	}
